@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Weather APP</title>
-<link rel="stylesheet" href="style.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
-<script src="scripts.js"></script>
-</head>
-<body>
-<div id="forecast">
-<h1>Weather at <span id="location"> </span></h1>
-<div id="imgdiv">
-<img id="img" src=""/>
-</div>
-<p>It is currently <span id="temp"> </span>ªC with <span id="desc"> </span></p>
-<p>Wind: <span id="wind"></span> m/s</p>
-</div>
-<script src="scripts.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Weather APP</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="scripts.js"></script>
+       
+    </head>
+    <body>
+        <div id="forecast">
+            <h1>Weather at <span id="location"> </span></h1>
+            <p><div class="ui-widget"><input type="text" id="searchBox">
+            <button id="find">Get weather</button></div>
+            <div id="imgdiv">
+                <img id="img" src=""/>
+            </div>
+            <p>It is currently <span id="temp"> </span>ªC with <span id="desc"> </span></p>
+            <p>Wind: <span id="wind"></span> m/s</p>
+        </div>
+    </body>
 </html>
