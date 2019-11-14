@@ -5,3 +5,7 @@ body{
 	text-align: center;
 	font-family: sans-serif;
 }
+
+.ui-widget li{
+    text-align: left;
+}
