@@ -1,11 +1,32 @@
 body{
 	margin: 0;
 	padding: 0;
-	background: linear-gradient(to right , blue,lightgreen);
+	background: linear-gradient(to right , grey,lightgreen);
 	text-align: center;
 	font-family: sans-serif;
 }
 
 .ui-widget li{
     text-align: left;
+}
+#forecast{
+    max-width:500px;
+    margin: auto;
+    border: 3px solid ;
+    border-color: rgb(70,70,70);
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 5px rgb(60,60,60);
+    border-radius: 16px;
+
+}
+#location{
+    font-size: 20px;
+}
+.ui-widget {
+  display: inline-block;
+  padding: 0px;
+}
+button{
+    border-radius: 16px;
+    border-radius: 16px;
 }
