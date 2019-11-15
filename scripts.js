@@ -39,13 +39,27 @@ $( function() {
         minLength: 3,
         source: function(request, response){
             var loc = "https://us1.locationiq.com/v1/search.php?key=ca9050a76a4af5&q=" + request.term + "&format=json";
-            $.getJSON([loc], function(data){
-                var displayName = new Array();
-                for (var i = 0; i < data.length; i++){
-                    displayName.push(data[i].display_name);
+            var displayName = new Array();
+            displayName.length = 0;
+            var i = 0;
+            //alert("pre-ajax");
+            $.ajax({
+                type: 'GET',
+                url: loc,
+                dataType: 'json',
+                success: function(data){
+
+                    for (var i = 0; i < data.length; i++){
+                        displayName.push(data[i].display_name);
+                    }
+                    response(displayName);
+                },
+                error: function(jqXhr, textStatus, errorThrown){
+                    displayName.push("No Results");
+                    response(displayName);
                 }
-                response(displayName);
-            });
+                
+            });          
         }    
     });
 } );
