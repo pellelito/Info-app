@@ -69,6 +69,28 @@ $("document").ready(function(){
     $("#find").click(function(){
         $.getJSON(["https://us1.locationiq.com/v1/search.php?key=ca9050a76a4af5&q=" + $("#searchBox").val() + "&format=json"], function(data){
             displayWeather(data[0].lat, data[0].lon);
+            malmoe();
         });
     });
 });
+var choice = "";
+var result = "";
+
+function malmoe(){
+    choice = document.getElementById('searchBox').value; 
+    result = choice.slice(0, 5);
+    if (result =="Malmö"){
+        // alert(result);
+        fetch('./data.json')
+        .then(response => {
+        return response.json()
+        })
+        .then(data => {
+        document.getElementById('malmo').innerHTML = "Kolla in dessa krogar i Malmö: <br>"+ data.best + '<br>' + data.notBest + '<br>' +data.notWorst + '<br>' +data.worst;
+        })
+        .catch(err => {
+    // Do something for an error here
+            alert("Fel, fel fel")
+  })
+        }
+}

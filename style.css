@@ -5,7 +5,15 @@ body{
 	text-align: center;
 	font-family: sans-serif;
 }
-
+a.link{
+    color: black;
+}
+a.visited{
+    color: black;
+}
+a.hover{
+    color: grey;
+}
 .ui-widget li{
     text-align: left;
 }
@@ -29,4 +37,7 @@ body{
 button{
     border-radius: 16px;
     border-radius: 16px;
+}
+#malmo{
+    font-size: 20px;
 }
